@@ -58,8 +58,9 @@
 \theoremstyle{definition}
 \newtheorem{problem}{Problem}
 
-% Change equation numbering to number equations by problem
-\numberwithin{equation}{problem}
+% Solution end character
+% What character is used to end the solutions?
+\newcommand{\solnend}{\ensuremath{\blacktriangleleft}}
 
 % A box for the solutions
 \newenvironment{soln}[1][Solution]{
@@ -72,7 +73,7 @@
     \par \vspace{0.3em}
     \noindent 
 }{
-		\hfill $\blacktriangleleft$
+		\hfill $\solnend$
     \end{tcolorbox}
     \bigbreak \noindent
 }
@@ -87,7 +88,7 @@
 				\par \vspace{0.3em}
 				\noindent
 		}{
-				\hfill $\blacktriangleleft$
+				\hfill $\solnend$
 		}
 }
 
@@ -159,3 +160,6 @@
 		\assignHeader
 		\infoBox
 }
+
+% Change equation numbering to number equations by problem
+\numberwithin{equation}{problem}
